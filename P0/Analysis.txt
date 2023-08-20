@@ -1,0 +1,33 @@
+Task 0
+
+The arrays are accessed by an index. The Worst-Case Big-O is O(1)
+Overall complexity is O(n)
+
+
+Task 1
+
+For the loops the complexity is O(n)
+For the "not in" operators, the complexity is O(n)
+
+Overall complexity is O(n)
+
+Task 2
+
+For the loops the complexity is O(n)
+Overall complexity is O(n)
+
+Task 3
+
+For the loops the complexity is O(n)
+For sorts,  the complexity is O(n log(n))
+For larger values, O(n log(n)) is > O(n)
+
+The overall complexity is O(n log(n)) + O)n) which is O(n log(n)) for larger values of n
+
+Task 4
+
+For the loops the complexity is O(n)
+For sorts,  the complexity is O(n log(n))
+For larger values, O(n log(n)) is > O(n)
+
+The overall complexity is O(n log(n)) + O)n) which is O(n log(n)) for larger values of n

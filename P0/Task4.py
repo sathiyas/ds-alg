@@ -5,20 +5,41 @@ It's ok if you don't understand how to read files.
 import csv
 
 telemarketers = []
+text_recievers = []
+text_senders = []
+call_recivers = []
 
-# with open('texts.csv', 'r') as f:
-#     reader = csv.reader(f)
-#     texts = list(reader)
+
+with open('texts.csv', 'r') as f:
+    """
+    Build list of text senders and recievers
+    """
+    reader = csv.reader(f)
+    texts = list(reader)
+    for text in texts:
+        sender = text[0]
+        reciever = text[1]
+        if sender not in text_senders:
+            text_senders.append(sender)
+        if reciever not in text_recievers:
+            text_recievers.append(reciever)
 
 with open('calls.csv', 'r') as f:
+    """
+    Build list of call recievers
+    """
     reader = csv.reader(f)
     calls = list(reader)
     for call in calls:
         calling = call[0]
         recieving = call[1]
-        if calling.startswith('140'):
-            if calling not in telemarketers:
-                telemarketers.append(calling)
+        if recieving not in call_recivers:
+            call_recivers.append(recieving)
+    for call in calls:
+        outgoing = call[0]
+        if outgoing not in text_recievers and outgoing not in text_recievers and outgoing not in call_recivers:
+            if outgoing not in telemarketers:
+                telemarketers.append(outgoing)
 
 telemarketers.sort()
 

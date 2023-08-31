@@ -16,9 +16,7 @@ with open('texts.csv', 'r') as f:
 
 def get_code(recieving):
     if recieving.startswith('('):
-        return recieving[1:4]
-    elif recieving.startswith('140'):
-        return '140'
+        return recieving.split('(')[1].split(')')[0]
     else:
         return recieving[0:4]
 
